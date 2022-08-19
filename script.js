@@ -6,6 +6,10 @@ buttonAverage.addEventListener('click', function average (firstNumber, secondNum
   firstNumber = document.getElementById('firstNumber').value
   secondNumber = document.getElementById('secondNumber').value
 
+  if (isNaN(firstNumber) || !firstNumber || isNaN(secondNumber) || !secondNumber) {
+    return document.getElementById("resultAverage").innerText = 'ERROR: Insert a number inside both inputs'
+  }
+
   return document.getElementById("resultAverage").innerText = ( Number(firstNumber) + Number(secondNumber)) / 2
 })
 
