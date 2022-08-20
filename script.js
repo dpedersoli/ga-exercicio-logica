@@ -50,23 +50,21 @@ console.log(oddOrEven(33));
 
 //Exercício 4 (console):
 const triangle = (number) => {
-  let string = ''
-  for (let linha = 1; linha <= number; linha++) {
+  for (let row = 0; row <= number; row++) { 
+    let string = '*';
 
-    for(let coluna = 1; coluna <= linha; coluna++){ 
-      string += "*";
+    for(let column = 1; column <= row; column++){ 
+      string += '*'; 
     }
-
-    string += "\n"
+    
+    console.log(string) 
   }
-
-  console.log(string + "\n");
 }
 
 triangle(5)
 
 const invertedTriangle = (number) => {
-  for (let row = 1; row <= number; row++) { 
+  for (let row = 0; row <= number; row++) { 
     let invertedString = '*';
 
     for(let column = number; column > row; column--){ 
@@ -78,3 +76,31 @@ const invertedTriangle = (number) => {
 }
 
 invertedTriangle(5)
+
+//Exercício 5 - Desafio Denise (console)
+// let mountainHeight = Number(window.prompt('Altura da montanha em metros (número inteiro): ', ''))
+
+const climbMountain = (mountainHeight) => {
+
+  let position = 0
+  let jump = 1
+  let bigJump = 4
+
+  console.log(`The mountain height is ${mountainHeight} gaps ahead`)
+
+  for (var i = 0; i < mountainHeight; i++) {
+    if(position + 4 <= mountainHeight){
+      position += bigJump
+    } else if (position < mountainHeight) {
+      position += jump
+    } else if (position == mountainHeight) {
+      break
+    }
+
+    console.log(position)
+  }
+  
+  console.log(`The Climber took ${i} jumps to get to the top of the mountain`)
+}
+
+climbMountain(17)
