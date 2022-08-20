@@ -36,3 +36,45 @@ buttonOperator.addEventListener('click', function operator (firstNumber, secondN
   }
 
 })
+
+//Exercício 3 (console):
+const oddOrEven = (num) => {
+  if(num % 2 == 0){
+    return `${num} is even`
+  }
+  return `${num} is odd`
+}
+
+console.log(oddOrEven(12));
+console.log(oddOrEven(33));
+
+//Exercício 4 (console):
+const triangle = (number) => {
+  let string = ''
+  for (let linha = 1; linha <= number; linha++) {
+
+    for(let coluna = 1; coluna <= linha; coluna++){ 
+      string += "*";
+    }
+
+    string += "\n"
+  }
+
+  console.log(string + "\n");
+}
+
+triangle(5)
+
+const invertedTriangle = (number) => {
+  for (let row = 1; row <= number; row++) { 
+    let invertedString = '*';
+
+    for(let column = number; column > row; column--){ 
+      invertedString += '*'; 
+    }
+    
+    console.log(invertedString) 
+  }
+}
+
+invertedTriangle(5)
